@@ -20,7 +20,6 @@ export const StoreProvider: React.FC<StoreProviderProps> = ({
   children,
 }: StoreProviderProps) => {
   const store = new RootStore();
-
   return (
     <storeContext.Provider value={store}>{children}</storeContext.Provider>
   );

@@ -10,6 +10,7 @@ import { useSortBy, useTable, Row } from "react-table";
 import Header from "./HeaderCell";
 import VaultCell from "./VaultCell";
 import FormatCell from "./FormatCell";
+import ButtonCell from "./ButtonCell";
 
 export interface VaultsTableProps {
   vaults: Vault[];
@@ -35,15 +36,13 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
         Header,
         Cell: FormatCell(formatPercentage),
       },
+      {
+        id: "Buttons",
+        accessor: (vault: Vault) => vault,
+        Header: "",
+        Cell: ButtonCell,
+      },
     ],
-    []
-  );
-
-  const anim = useMemo(
-    () => ({
-      hidden: { opacity: 0 },
-      visible: { opacity: 1 },
-    }),
     []
   );
 
