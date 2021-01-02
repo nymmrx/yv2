@@ -6,3 +6,12 @@ declare module "*.svg" {
 
   export default string;
 }
+
+type NoChildren<T> = Omit<T, "children">;
+type WithChildren<T> = T & {
+  children?: React.ReactNode;
+};
+
+type Wrap<T, G> = {
+  [T]: G;
+};

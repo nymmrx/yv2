@@ -1,9 +1,7 @@
+import React from "react";
 import clsx from "clsx";
-import React, { ReactNode } from "react";
 
-export interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: ReactNode[] | ReactNode | string;
-}
+export type PageProps = React.HTMLAttributes<HTMLDivElement>;
 
 export default function Page({ children, ...props }: PageProps) {
   return (

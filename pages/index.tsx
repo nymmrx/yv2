@@ -15,6 +15,7 @@ import Connection from "@comp/ui/ChainConnection";
 import YearnIcon from "@assets/yearn.svg";
 
 import useVaults from "@hooks/stores/useVaults";
+import VaultsTable from "@comp/ui/Vault/Table";
 
 const Index = observer(() => {
   const { activate, deactivate, active, account } = useWeb3React();
@@ -36,7 +37,7 @@ const Index = observer(() => {
             <h1 className="hidden sm:block font-light">yearn.finance</h1>
             <h1 className="block sm:hidden font-light">yearn</h1>
           </div>
-          <div className="hidden lg:flex flex-grow items-baseline gap-8">
+          <div className="hidden lg:flex flex-grow items-baseline space-x-8">
             <div className="w-24 text-center">
               <Link href="/" active>
                 EARN
@@ -52,7 +53,7 @@ const Index = observer(() => {
               <Link href="/">CREDIT</Link>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex space-x-2">
             <Connection
               address={account}
               connected={active}
@@ -67,9 +68,9 @@ const Index = observer(() => {
           </div>
         </div>
       </Container>
-      <Container>
-        <h1>{JSON.stringify(vaults)}</h1>
-      </Container>
+      <div className="container lg:max-w-screen-lg mx-auto">
+        <VaultsTable vaults={vaults} />
+      </div>
     </Page>
   );
 });

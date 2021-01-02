@@ -1,0 +1,566 @@
+[
+  {
+    "displayName": "Curve mUSD Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi MUSD/3Crv",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x1AEf73d49Dedc4b1778d0706583995958Dc862e6/logo-128.png",
+      "symbol": "musd3CRV",
+      "address": "0x1AEf73d49Dedc4b1778d0706583995958Dc862e6",
+      "displayName": "Curve mUSD Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x0FCDAeDFb8A7DfDa2e9838564c5A1665d856AFDF/logo-128.png",
+    "symbol": "yvmusd3CRV",
+    "created": 1609527788,
+    "apy": { "inceptionSample": 0, "oneMonthSample": null },
+    "decimals": "18",
+    "address": "0x0FCDAeDFb8A7DfDa2e9838564c5A1665d856AFDF",
+    "inceptionBlock": "11391849",
+    "name": "yearn Curve.fi MUSD/3Crv",
+    "type": "v1"
+  },
+  {
+    "displayName": "DAI yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Dai Stablecoin",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo-128.png",
+      "symbol": "DAI",
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "displayName": "Dai Stablecoin",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo-128.png",
+    "symbol": "yvDAI",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 8.32026007975124,
+      "oneMonthSample": 8.77775069218006
+    },
+    "decimals": "18",
+    "address": "0xBFa4D8AA6d8a379aBFe7793399D3DdaCC5bBECBB",
+    "inceptionBlock": "11394020",
+    "name": "DAI yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "Curve Y Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi yDAI/yUSDC/yUSDT/yTUSD",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8/logo-128.png",
+      "symbol": "yDAI+yUSDC+yUSDT+yTUSD",
+      "address": "0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8",
+      "displayName": "Curve Y Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x5dbcF33D8c2E976c6b560249878e6F1491Bca25c/logo-128.png",
+    "symbol": "yyDAI+yUSDC+yUSDT+yTUSD",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 26.06794508612358,
+      "oneMonthSample": 6.9333954252221
+    },
+    "decimals": "18",
+    "address": "0x5dbcF33D8c2E976c6b560249878e6F1491Bca25c",
+    "inceptionBlock": "10559448",
+    "name": "yearn Curve.fi yDAI/yUSDC/yUSDT/yTUSD",
+    "type": "v1"
+  },
+  {
+    "displayName": "Curve GUSD Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi GUSD/3Crv",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xD2967f45c4f384DEEa880F807Be904762a3DeA07/logo-128.png",
+      "symbol": "gusd3CRV",
+      "address": "0xD2967f45c4f384DEEa880F807Be904762a3DeA07",
+      "displayName": "Curve GUSD Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xcC7E70A958917cCe67B4B87a8C30E6297451aE98/logo-128.png",
+    "symbol": "yvgusd3CRV",
+    "created": 1609527788,
+    "apy": { "inceptionSample": 0, "oneMonthSample": null },
+    "decimals": "18",
+    "address": "0xcC7E70A958917cCe67B4B87a8C30E6297451aE98",
+    "inceptionBlock": "11397633",
+    "name": "yearn Curve.fi GUSD/3Crv",
+    "type": "v1"
+  },
+  {
+    "displayName": "USDC yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "USD Coin",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo-128.png",
+      "symbol": "USDC",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "displayName": "USD Coin",
+      "decimals": "6"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x597aD1e0c13Bfe8025993D9e79C69E1c0233522e/logo-128.png",
+    "symbol": "yUSDC",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 9.609580498622849,
+      "oneMonthSample": 9.112347421151219
+    },
+    "decimals": "6",
+    "address": "0x597aD1e0c13Bfe8025993D9e79C69E1c0233522e",
+    "inceptionBlock": "10532708",
+    "name": "yearn USD//C",
+    "type": "v1"
+  },
+  {
+    "displayName": "WETH yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Wrapped Ether",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo-128.png",
+      "symbol": "WETH",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "displayName": "Wrapped Ether",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xe1237aA7f535b0CC33Fd973D66cBf830354D16c7/logo-128.png",
+    "symbol": "yWETH",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 2.8269864061779533,
+      "oneMonthSample": 1.091601335408322
+    },
+    "decimals": "18",
+    "address": "0xe1237aA7f535b0CC33Fd973D66cBf830354D16c7",
+    "inceptionBlock": "10774489",
+    "name": "yearn Wrapped Ether",
+    "type": "v1"
+  },
+  {
+    "displayName": "Curve Compound Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi cDAI/cUSDC",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2/logo-128.png",
+      "symbol": "cDAI+cUSDC",
+      "address": "0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2",
+      "displayName": "Curve Compound Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x629c759D1E83eFbF63d84eb3868B564d9521C129/logo-128.png",
+    "symbol": "yvcDAI+cUSDC",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 12.289920002082916,
+      "oneMonthSample": 13.563347161689428
+    },
+    "decimals": "18",
+    "address": "0x629c759D1E83eFbF63d84eb3868B564d9521C129",
+    "inceptionBlock": "11210772",
+    "name": "yearn Curve.fi cDAI/cUSDC",
+    "type": "v1"
+  },
+  {
+    "displayName": "DEV yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Dev",
+      "icon": null,
+      "symbol": "DEV",
+      "address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+      "displayName": "Dev",
+      "decimals": "18"
+    },
+    "icon": null,
+    "symbol": "yvDEV",
+    "created": 1609527788,
+    "apy": { "inceptionSample": 0, "oneMonthSample": 0 },
+    "decimals": "18",
+    "address": "0xFeD651936Af7e98F7F2A93c03B1E28a2DA7dfaD4",
+    "inceptionBlock": "11429467",
+    "name": "DEV yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "GUSD yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Gemini dollar",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd/logo-128.png",
+      "symbol": "GUSD",
+      "address": "0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd",
+      "displayName": "Gemini dollar",
+      "decimals": "2"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xec0d8D3ED5477106c6D4ea27D90a60e594693C90/logo-128.png",
+    "symbol": "yGUSD",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 14267.27857961812,
+      "oneMonthSample": 41150.36161578113
+    },
+    "decimals": "2",
+    "address": "0xec0d8D3ED5477106c6D4ea27D90a60e594693C90",
+    "inceptionBlock": "11065127",
+    "name": "yearn Gemini dollar",
+    "type": "v1"
+  },
+  {
+    "displayName": "zLOT yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "zLOT",
+      "icon": null,
+      "symbol": "zLOT",
+      "address": "0xA8e7AD77C60eE6f30BaC54E2E7c0617Bd7B5A03E",
+      "displayName": "zLOT",
+      "decimals": "18"
+    },
+    "icon": null,
+    "symbol": "yvzLOT",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 2.0380394150616463,
+      "oneMonthSample": 1.7947452807585345
+    },
+    "decimals": "18",
+    "address": "0xca6c9fb742071044247298ea0dbd60b77586e1e8",
+    "inceptionBlock": "11349588",
+    "name": "zLOT yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "Curve 3pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi DAI/USDC/USDT",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490/logo-128.png",
+      "symbol": "3Crv",
+      "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
+      "displayName": "Curve 3pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x9cA85572E6A3EbF24dEDd195623F188735A5179f/logo-128.png",
+    "symbol": "y3Crv",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 12.758860402871454,
+      "oneMonthSample": 10.489631063671446
+    },
+    "decimals": "18",
+    "address": "0x9cA85572E6A3EbF24dEDd195623F188735A5179f",
+    "inceptionBlock": "11026971",
+    "name": "yearn Curve.fi DAI/USDC/USDT",
+    "type": "v1"
+  },
+  {
+    "displayName": "WETH yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Wrapped Ether",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo-128.png",
+      "symbol": "WETH",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "displayName": "Wrapped Ether",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo-128.png",
+    "symbol": "yvWETH",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": -1.7126678654510334,
+      "oneMonthSample": -1.3412330221313407
+    },
+    "decimals": "18",
+    "address": "0x6392e8fa0588CB2DCb7aF557FdC9D10FDe48A325",
+    "inceptionBlock": "11439507",
+    "name": "WETH yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "CRETH2 yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Cream ETH 2",
+      "icon": null,
+      "symbol": "CRETH2",
+      "address": "0xcBc1065255cBc3aB41a6868c22d1f1C573AB89fd",
+      "displayName": "Cream ETH 2",
+      "decimals": "18"
+    },
+    "icon": null,
+    "symbol": "yvCRETH2",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 22.970886437627275,
+      "oneMonthSample": 21.04737045736921
+    },
+    "decimals": "18",
+    "address": "0x20Eb2A369b71C29FC4aFCddBbc1CAB66CCfcB062",
+    "inceptionBlock": "11380343",
+    "name": "CRETH2 yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "Curve sBTC Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi renBTC/wBTC/sBTC",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3/logo-128.png",
+      "symbol": "crvRenWSBTC",
+      "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+      "displayName": "Curve sBTC Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x7Ff566E1d69DEfF32a7b244aE7276b9f90e9D0f6/logo-128.png",
+    "symbol": "ycrvRenWSBTC",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 9.880921608346492,
+      "oneMonthSample": 2.8650403023927256
+    },
+    "decimals": "18",
+    "address": "0x7Ff566E1d69DEfF32a7b244aE7276b9f90e9D0f6",
+    "inceptionBlock": "10734341",
+    "name": "yearn Curve.fi renBTC/wBTC/sBTC",
+    "type": "v1"
+  },
+  {
+    "displayName": "USDT yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Tether USD",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo-128.png",
+      "symbol": "USDT",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "displayName": "Tether USD",
+      "decimals": "6"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x2f08119C6f07c006695E079AAFc638b8789FAf18/logo-128.png",
+    "symbol": "yUSDT",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 11.011991287530867,
+      "oneMonthSample": 7.419071023323712
+    },
+    "decimals": "6",
+    "address": "0x2f08119C6f07c006695E079AAFc638b8789FAf18",
+    "inceptionBlock": "10651402",
+    "name": "yearn Tether USD",
+    "type": "v1"
+  },
+  {
+    "displayName": "TUSD yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "TrueUSD",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x0000000000085d4780B73119b644AE5ecd22b376/logo-128.png",
+      "symbol": "TUSD",
+      "address": "0x0000000000085d4780B73119b644AE5ecd22b376",
+      "displayName": "TUSD",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x37d19d1c4E1fa9DC47bD1eA12f742a0887eDa74a/logo-128.png",
+    "symbol": "yTUSD",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 15.119000199398505,
+      "oneMonthSample": 10.183001216989869
+    },
+    "decimals": "18",
+    "address": "0x37d19d1c4E1fa9DC47bD1eA12f742a0887eDa74a",
+    "inceptionBlock": "10603368",
+    "name": "yearn TrueUSD",
+    "type": "v1"
+  },
+  {
+    "displayName": "LINK yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "ChainLink Token",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo-128.png",
+      "symbol": "LINK",
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "displayName": "ChainLink Token",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x881b06da56BB5675c54E4Ed311c21E54C5025298/logo-128.png",
+    "symbol": "yLINK",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 5.189711346544208,
+      "oneMonthSample": -0.3606519686817066
+    },
+    "decimals": "18",
+    "address": "0x881b06da56BB5675c54E4Ed311c21E54C5025298",
+    "inceptionBlock": "10604016",
+    "name": "yearn ChainLink Token",
+    "type": "v1"
+  },
+  {
+    "displayName": "USDC yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "USD Coin",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo-128.png",
+      "symbol": "USDC",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "displayName": "USD Coin",
+      "decimals": "6"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo-128.png",
+    "symbol": "yvUSDC",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": -1162.3304105517977,
+      "oneMonthSample": 9.6433e-12
+    },
+    "decimals": "6",
+    "address": "0xe2F6b9773BF3A015E2aA70741Bde1498bdB9425b",
+    "inceptionBlock": "11393953",
+    "name": "Yearn USDC Vault",
+    "type": "v2"
+  },
+  {
+    "displayName": "HEGIC yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Hegic",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x584bC13c7D411c00c01A62e8019472dE68768430/logo-128.png",
+      "symbol": "HEGIC",
+      "address": "0x584bC13c7D411c00c01A62e8019472dE68768430",
+      "displayName": "HEGIC",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x584bC13c7D411c00c01A62e8019472dE68768430/logo-128.png",
+    "symbol": "yvHEGIC",
+    "created": 1609527788,
+    "apy": { "inceptionSample": 0, "oneMonthSample": 0 },
+    "decimals": "18",
+    "address": "0x19db27D2E9E4B780CF9A296D575aBbddEe1578DA",
+    "inceptionBlock": "11422666",
+    "name": "yHegic vault",
+    "type": "v2"
+  },
+  {
+    "displayName": "DAI yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Dai Stablecoin",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo-128.png",
+      "symbol": "DAI",
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "displayName": "Dai Stablecoin",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xACd43E627e64355f1861cEC6d3a6688B31a6F952/logo-128.png",
+    "symbol": "yDAI",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 22.012819888090434,
+      "oneMonthSample": 10.597220237716433
+    },
+    "decimals": "18",
+    "address": "0xACd43E627e64355f1861cEC6d3a6688B31a6F952",
+    "inceptionBlock": "10650116",
+    "name": "yearn Dai Stablecoin",
+    "type": "v1"
+  },
+  {
+    "displayName": "SushiSwap YFI-ETH Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "SushiSwap LP Token",
+      "icon": null,
+      "symbol": "SLP",
+      "address": "0x088ee5007C98a9677165D78dD2109AE4a3D04d0C",
+      "displayName": "SushiSwap LP Token",
+      "decimals": "18"
+    },
+    "icon": null,
+    "symbol": "yvSushi-YFI-WETH",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": -0.06644432958829855,
+      "oneMonthSample": -0.06591562036848425
+    },
+    "decimals": "18",
+    "address": "0x27Eb83254D900AB4F9b15d5652d913963FeC35e3",
+    "inceptionBlock": "11403406",
+    "name": "Sushiswap v2 YFI-WETH Pool yVault",
+    "type": "v2"
+  },
+  {
+    "displayName": "Curve BUSD Pool yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Curve.fi yDAI/yUSDC/yUSDT/yBUSD",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x3B3Ac5386837Dc563660FB6a0937DFAa5924333B/logo-128.png",
+      "symbol": "yDAI+yUSDC+yUSDT+yBUSD",
+      "address": "0x3B3Ac5386837Dc563660FB6a0937DFAa5924333B",
+      "displayName": "Curve BUSD Pool",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x2994529C0652D127b7842094103715ec5299bBed/logo-128.png",
+    "symbol": "yyDAI+yUSDC+yUSDT+yBUSD",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 15.865510268726753,
+      "oneMonthSample": 10.233529304583557
+    },
+    "decimals": "18",
+    "address": "0x2994529C0652D127b7842094103715ec5299bBed",
+    "inceptionBlock": "10709740",
+    "name": "yearn Curve.fi yDAI/yUSDC/yUSDT/yBUSD",
+    "type": "v1"
+  },
+  {
+    "displayName": "aLINK yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "Aave Interest bearing LINK",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xA64BD6C70Cb9051F6A9ba1F163Fdc07E0DfB5F84/logo-128.png",
+      "symbol": "aLINK",
+      "address": "0xA64BD6C70Cb9051F6A9ba1F163Fdc07E0DfB5F84",
+      "displayName": "aLINK",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x29E240CFD7946BA20895a7a02eDb25C210f9f324/logo-128.png",
+    "symbol": "yaLINK",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 11.195502243900323,
+      "oneMonthSample": 0.6124198041936512
+    },
+    "decimals": "18",
+    "address": "0x29E240CFD7946BA20895a7a02eDb25C210f9f324",
+    "inceptionBlock": "10599617",
+    "name": "yearn Aave Interest bearing LINK",
+    "type": "v1"
+  },
+  {
+    "displayName": "YFI yVault",
+    "updated": 1609588470,
+    "token": {
+      "name": "yearn.finance",
+      "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e/logo-128.png",
+      "symbol": "YFI",
+      "address": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
+      "displayName": "YFI",
+      "decimals": "18"
+    },
+    "icon": "https://raw.githubusercontent.com/iearn-finance/yearn-assets/master/icons/tokens/0xBA2E7Fed597fd0E3e70f5130BcDbbFE06bB94fe1/logo-128.png",
+    "symbol": "yYFI",
+    "created": 1609527788,
+    "apy": {
+      "inceptionSample": 2.9683521710115714,
+      "oneMonthSample": 0.6585599798165439
+    },
+    "decimals": "18",
+    "address": "0xBA2E7Fed597fd0E3e70f5130BcDbbFE06bB94fe1",
+    "inceptionBlock": "10690968",
+    "name": "yearn yearn.finance",
+    "type": "v1"
+  }
+]

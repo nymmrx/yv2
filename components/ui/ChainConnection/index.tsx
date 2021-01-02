@@ -20,7 +20,7 @@ export default function Web3Connection({
   );
   return (
     <Button {...props}>
-      <div className="flex gap-2 items-center">
+      <div className="flex space-x-2 items-center">
         <p className="font-mono">{status}</p>
         <svg
           className={clsx(

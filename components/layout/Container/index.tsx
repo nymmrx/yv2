@@ -1,9 +1,7 @@
+import React from "react";
 import clsx from "clsx";
-import React, { ReactNode } from "react";
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  children?: ReactNode[] | ReactNode | string;
-}
+export type ContainerProps = React.HTMLAttributes<HTMLDivElement>;
 
 export default function Container({ children, ...props }: ContainerProps) {
   return (
