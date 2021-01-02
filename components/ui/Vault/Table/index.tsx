@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 
 import { observer } from "mobx-react-lite";
+import { motion } from "framer-motion";
 
 import { Vault } from "@state/vaults";
 import { formatPercentage } from "@utils/format";
@@ -38,6 +39,14 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
     []
   );
 
+  const anim = useMemo(
+    () => ({
+      hidden: { opacity: 0 },
+      visible: { opacity: 1 },
+    }),
+    []
+  );
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -53,7 +62,7 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
   );
 
   return (
-    <table {...getTableProps()} className="w-full border table-auto">
+    <table {...getTableProps()} className="w-full table-auto">
       <thead>
         {headerGroups.map((headerGroup) => {
           const { key, ...props } = headerGroup.getHeaderGroupProps();
@@ -79,7 +88,13 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
           prepareRow(row);
           const { key, ...props } = row.getRowProps();
           return (
-            <tr key={key} {...props} className="border border-gray-600">
+            <motion.tr
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              key={key}
+              {...props}
+              className="border border-gray-600"
+            >
               {row.cells.map((cell) => {
                 const { key, ...props } = cell.getCellProps();
                 return (
@@ -88,7 +103,7 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
                   </td>
                 );
               })}
-            </tr>
+            </motion.tr>
           );
         })}
       </tbody>
