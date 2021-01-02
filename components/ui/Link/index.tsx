@@ -20,8 +20,8 @@ export default function Button({
       <a
         {...props}
         className={clsx(
-          "text-lg transition hover:text-white",
-          active ? "text-white underline" : "text-gray-500",
+          "text-lg transition hover:text-blue-400 dark:hover:text-white",
+          active ? "text-blue-400 dark:text-white underline" : "text-gray-500",
           props.className
         )}
       >

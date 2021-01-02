@@ -11,7 +11,12 @@ export default function Button({ children, ...props }: ButtonProps) {
     <button
       {...props}
       className={clsx(
-        "border border-gray-500 rounded-lg hover:bg-gray-900 hover:border-white transition-colors max-h-full rainbow",
+        `border border-gray-500 rounded-lg 
+        hover:bg-gray-200 
+        hover:border-black
+        dark:hover:bg-gray-900 
+        dark:hover:border-white 
+        transition-colors max-h-full`,
         props.className
       )}
     >
