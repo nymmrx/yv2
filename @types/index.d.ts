@@ -12,6 +12,6 @@ type WithChildren<T> = T & {
   children?: React.ReactNode;
 };
 
-type Wrap<T, G> = {
-  [T]: G;
+type Wrap<T> = {
+  value: G;
 };
