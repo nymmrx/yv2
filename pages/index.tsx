@@ -16,6 +16,7 @@ import YearnIcon from "@assets/yearn.svg";
 
 import useVaults from "@hooks/stores/useVaults";
 import VaultsTable from "@comp/ui/Vault/Table";
+import Modal from "@comp/ui/Modal";
 
 const Index = observer(() => {
   const { activate, deactivate, active, account } = useWeb3React();

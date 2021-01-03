@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
 import { observer } from "mobx-react-lite";
-import { motion } from "framer-motion";
+import { useSpring, animated } from "react-spring";
 
 import { Vault } from "@state/vaults";
 import { formatPercentage } from "@utils/format";
@@ -60,6 +60,12 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
     useSortBy
   );
 
+  const animation = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 750 },
+  });
+
   return (
     <table {...getTableProps()} className="w-full table-auto">
       <thead>
@@ -87,10 +93,9 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
           prepareRow(row);
           const { key, ...props } = row.getRowProps();
           return (
-            <motion.tr
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+            <animated.tr
               key={key}
+              style={animation}
               {...props}
               className="border border-gray-600"
             >
@@ -102,7 +107,7 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
                   </td>
                 );
               })}
-            </motion.tr>
+            </animated.tr>
           );
         })}
       </tbody>
