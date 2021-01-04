@@ -22,21 +22,23 @@ export default function Modal({
   const AnimatedDialogOverlay = animated(DialogOverlay) as typeof DialogOverlay;
   const AnimatedDialogContent = animated(DialogContent) as typeof DialogContent;
   const transitions = useTransition(isOpen, null, {
-    from: { opacity: 0, transform: "translate3d(0,-24px,0)" },
-    enter: { opacity: 1, transform: "translate3d(0,-0,0)" },
-    leave: { opacity: 0, transform: "translate3d(0,24px,0)" },
-    config: { duration: 250 },
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 200 },
   });
   return (
     <div>
       {transitions.map(
-        ({ item, props: style }) =>
+        ({ item, key, props: style }) =>
           item && (
             <AnimatedDialogOverlay
               {...props}
+              key={key}
               style={{ opacity: style.opacity }}
             >
               <AnimatedDialogContent
+                aria-label={"Modal"}
                 style={{ transform: style.transform }}
                 className={clsx("rounded-lg", className)}
               >

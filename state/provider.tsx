@@ -1,11 +1,14 @@
 import React, { ReactNode } from "react";
+import UIStore from "./ui";
 
 import VaultsStore from "./vaults";
 
 class RootStore {
   vaults: VaultsStore;
+  ui: UIStore;
   constructor() {
     this.vaults = new VaultsStore();
+    this.ui = new UIStore();
   }
 }
 

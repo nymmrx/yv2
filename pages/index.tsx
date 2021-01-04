@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { observer } from "mobx-react-lite";
+import { action, toJS } from "mobx";
 
 import { useWeb3React } from "@web3-react/core";
 import { InjectedConnector } from "@web3-react/injected-connector";
@@ -11,16 +12,17 @@ import Container from "@comp/layout/Container";
 import Link from "@comp/ui/Link";
 import Button from "@comp/ui/Button";
 import Connection from "@comp/ui/ChainConnection";
-
-import YearnIcon from "@assets/yearn.svg";
-
-import useVaults from "@hooks/stores/useVaults";
 import VaultsTable from "@comp/ui/Vault/Table";
 import Modal from "@comp/ui/Modal";
 
-const Index = observer(() => {
+import YearnIcon from "@assets/yearn.svg";
+
+import useUI from "@hooks/stores/useUI";
+
+const Index = observer(function Index() {
+  const { isOpen, children, close } = useUI((store) => store.ui.modal);
+
   const { activate, deactivate, active, account } = useWeb3React();
-  const vaults = useVaults((store) => store.vaults);
   const toggleConnection = useCallback(() => {
     if (active) {
       deactivate();
@@ -29,6 +31,7 @@ const Index = observer(() => {
       activate(injected);
     }
   }, [active, activate, deactivate]);
+
   return (
     <Page>
       <Container>
@@ -69,9 +72,14 @@ const Index = observer(() => {
           </div>
         </div>
       </Container>
-      <div className="container lg:max-w-screen-lg mx-auto">
-        <VaultsTable vaults={vaults} />
-      </div>
+      <Container>
+        <div className="container lg:max-w-screen-lg mx-auto">
+          <VaultsTable />
+        </div>
+      </Container>
+      <Modal isOpen={isOpen} onDismiss={action(() => close())}>
+        <div>{children}</div>
+      </Modal>
     </Page>
   );
 });

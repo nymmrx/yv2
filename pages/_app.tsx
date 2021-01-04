@@ -11,6 +11,7 @@ import { StoreProvider } from "@state/provider";
 import "../styles/globals.scss";
 
 import { configure } from "mobx";
+import { enableStaticRendering } from "mobx-react-lite";
 
 configure({
   enforceActions: "always",
@@ -19,6 +20,8 @@ configure({
   observableRequiresReaction: true,
   disableErrorBoundaries: true,
 });
+
+// enableStaticRendering(true);
 
 export default function YearnApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
 
 import { observer } from "mobx-react-lite";
+import { runInAction } from "mobx";
+
 import { useSpring, animated } from "react-spring";
 
 import { Vault } from "@state/vaults";
@@ -11,12 +13,11 @@ import Header from "./HeaderCell";
 import VaultCell from "./VaultCell";
 import FormatCell from "./FormatCell";
 import ButtonCell from "./ButtonCell";
+import useVaults from "@hooks/stores/useVaults";
 
-export interface VaultsTableProps {
-  vaults: Vault[];
-}
+const VaultsTable = observer(function VaultsTable() {
+  const data = useVaults((store) => store.vaults);
 
-const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
   const columns = useMemo(
     () => [
       {
@@ -55,7 +56,7 @@ const VaultsTable = observer(({ vaults }: VaultsTableProps) => {
   } = useTable(
     {
       columns,
-      data: vaults,
+      data,
     },
     useSortBy
   );

@@ -9,7 +9,9 @@ export interface VaultCellProps {
   value: Vault;
 }
 
-const VaultCellProps = observer(({ value: vault }: VaultCellProps) => {
+const VaultCellProps = observer(function VaultCellProps({
+  value: vault,
+}: VaultCellProps) {
   const animation = useSpring({
     opacity: 1,
     from: { opacity: 0 },

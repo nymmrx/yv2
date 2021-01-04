@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 import context from "@state/provider";
 import VaultStore from "@state/vaults";
 
