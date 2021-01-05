@@ -1,36 +1,26 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
-import { action, toJS } from "mobx";
+import { action } from "mobx";
 
-import { useWeb3React } from "@web3-react/core";
-import { InjectedConnector } from "@web3-react/injected-connector";
-import { BsGearFill, BsThreeDots } from "react-icons/bs";
+import { BsGearFill } from "react-icons/bs";
 
 import Page from "@comp/layout/Page";
 import Container from "@comp/layout/Container";
 
 import Link from "@comp/ui/Link";
 import Button from "@comp/ui/Button";
-import Connection from "@comp/ui/ChainConnection";
+import WalletConnection from "@comp/ui/WalletConnection";
 import VaultsTable from "@comp/ui/Vault/Table";
 import Modal from "@comp/ui/Modal";
 
 import YearnIcon from "@assets/yearn.svg";
 
 import useUI from "@hooks/stores/useUI";
+import ThemeSwitcher from "@comp/ui/ThemeSwitcher";
+import Confetti from "@comp/ui/Confetti";
 
 const Index = observer(function Index() {
-  const { isOpen, children, close } = useUI((store) => store.ui.modal);
-
-  const { activate, deactivate, active, account } = useWeb3React();
-  const toggleConnection = useCallback(() => {
-    if (active) {
-      deactivate();
-    } else {
-      const injected = new InjectedConnector({ supportedChainIds: [1] });
-      activate(injected);
-    }
-  }, [active, activate, deactivate]);
+  const { isOpen, children, close } = useUI((ui) => ui.modal);
 
   return (
     <Page>
@@ -58,16 +48,10 @@ const Index = observer(function Index() {
             </div>
           </div>
           <div className="flex space-x-2">
-            <Connection
-              address={account}
-              connected={active}
-              onClick={toggleConnection}
-            />
+            <WalletConnection />
+            <ThemeSwitcher />
             <Button className="hidden md:block">
-              <BsGearFill className="w-4 h-4" />
-            </Button>
-            <Button className="hidden md:block">
-              <BsThreeDots className="w-4 h-4" />
+              <BsGearFill className="w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -77,7 +61,11 @@ const Index = observer(function Index() {
           <VaultsTable />
         </div>
       </Container>
-      <Modal isOpen={isOpen} onDismiss={action(() => close())}>
+      <Modal
+        className="bg-transparent"
+        isOpen={isOpen}
+        onDismiss={action(() => close())}
+      >
         <div>{children}</div>
       </Modal>
     </Page>

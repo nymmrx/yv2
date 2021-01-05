@@ -11,7 +11,9 @@ import { StoreProvider } from "@state/provider";
 import "../styles/globals.scss";
 
 import { configure } from "mobx";
-import { enableStaticRendering } from "mobx-react-lite";
+
+import ThemeProvider from "@comp/provider/ThemeProvider";
+import Confetti from "@comp/ui/Confetti";
 
 configure({
   enforceActions: "always",
@@ -21,19 +23,20 @@ configure({
   disableErrorBoundaries: true,
 });
 
-// enableStaticRendering(true);
-
 export default function YearnApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>yearn.finance</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
       <StrictMode>
         <StoreProvider>
-          <Web3ReactProvider getLibrary={getLibrary}>
-            <Component {...pageProps} />
-          </Web3ReactProvider>
+          <ThemeProvider>
+            <Web3ReactProvider getLibrary={getLibrary}>
+              <Component {...pageProps} />
+            </Web3ReactProvider>
+          </ThemeProvider>
         </StoreProvider>
       </StrictMode>
     </>

@@ -7,7 +7,7 @@ import {
 import { useTransition, animated } from "react-spring";
 
 import "@reach/dialog/styles.css";
-import clsx from "clsx";
+import ThemeProvider from "@comp/provider/ThemeProvider";
 
 export interface ModalProps extends DialogOverlayProps {
   className?: string;
@@ -37,13 +37,15 @@ export default function Modal({
               key={key}
               style={{ opacity: style.opacity }}
             >
-              <AnimatedDialogContent
-                aria-label={"Modal"}
-                style={{ transform: style.transform }}
-                className={clsx("rounded-lg", className)}
-              >
-                {children}
-              </AnimatedDialogContent>
+              <ThemeProvider>
+                <AnimatedDialogContent
+                  aria-label={"Modal"}
+                  style={{ transform: style.transform }}
+                  className={className}
+                >
+                  {children}
+                </AnimatedDialogContent>
+              </ThemeProvider>
             </AnimatedDialogOverlay>
           )
       )}

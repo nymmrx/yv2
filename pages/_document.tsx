@@ -17,7 +17,7 @@ export default class YearnDocument extends Document {
     return (
       <Html>
         <Head />
-        <body>
+        <body id={"app"}>
           <Main />
           <NextScript />
         </body>

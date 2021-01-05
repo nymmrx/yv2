@@ -1,4 +1,4 @@
-export const Endpoint = "https://dev-api.yearn.tools";
+export const Endpoint = "https://api.yearn.tools";
 
 export default {
   vaults: {

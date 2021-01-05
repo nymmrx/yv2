@@ -17,7 +17,7 @@ export interface ButtonCellProps {
 const ButtonCellProps = observer(function ButtonCellProps({
   value: vault,
 }: ButtonCellProps) {
-  const { open } = useUI((store) => store.ui.modal);
+  const { open } = useUI((ui) => ui.modal);
   const openVaultInteract = () => open(<VaultInteractView vault={vault} />);
   const openVaultStats = () => open(<VaultStatsView vault={vault} />);
   return (

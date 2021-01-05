@@ -1,13 +1,10 @@
-import { action, makeAutoObservable } from "mobx";
+import { action, makeAutoObservable, observable } from "mobx";
 
 import Modal from "./modal";
 
-export interface UI {
-  modal: Modal;
-}
-
 export default class UIStore {
-  ui: UI;
+  theme: "dark" | "light";
+  modal: Modal;
 
   constructor() {
     makeAutoObservable(this);
@@ -15,8 +12,7 @@ export default class UIStore {
   }
 
   reset = action(() => {
-    this.ui = {
-      modal: new Modal(),
-    };
+    this.theme = "dark";
+    this.modal = new Modal();
   });
 }

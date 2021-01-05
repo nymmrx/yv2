@@ -43,12 +43,12 @@ export default class VaultsStore {
 
   fetch = () => {
     console.log("[vaults] fetching");
-    fetch(api.vaults.all)
-      .then((res) => res.json())
-      .then((res) => {
-        return res;
-      })
-      .then(action("Hello World", (vaults) => (this.vaults = vaults)));
-    // this.vaults = sample;
+    // fetch(api.vaults.all)
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     return res;
+    //   })
+    //   .then(action("Hello World", (vaults) => (this.vaults = vaults)));
+    this.vaults = sample;
   };
 }
