@@ -74,7 +74,7 @@ const VaultsTable = observer(function VaultsTable() {
           {headerGroups.map((headerGroup) => {
             const { key, ...props } = headerGroup.getHeaderGroupProps();
             return (
-              <tr key={key} {...props} className="border-b border-gray-600">
+              <tr key={key} {...props}>
                 {headerGroup.headers.map((column) => {
                   const { key, ...props } = column.getHeaderProps(
                     column.getSortByToggleProps()
@@ -99,7 +99,7 @@ const VaultsTable = observer(function VaultsTable() {
                 key={key}
                 style={animation}
                 {...props}
-                className="last:border-b-0 border-b border-gray-600"
+                className="border-t border-gray-600"
               >
                 {row.cells.map((cell) => {
                   const { key, ...props } = cell.getCellProps();

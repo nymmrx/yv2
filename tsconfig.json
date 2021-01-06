@@ -23,6 +23,6 @@
       "@state/*": ["state/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "testenv/src/plsmoney.js", "testenv/src/settings.js"],
   "exclude": ["node_modules"]
 }

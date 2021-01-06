@@ -20,7 +20,10 @@ const VaultInteractView = observer(function VaultInteractView({
     inputRef.current.focus();
   }, []);
   return (
-    <DialogContent className="dark:bg-gray-700 dark:text-white rounded-lg p-0 max-w-3xl">
+    <DialogContent
+      aria-label="Vault interact"
+      className="dark:bg-gray-700 dark:text-white rounded-lg p-0 max-w-3xl"
+    >
       <div className="p-8 space-y-6">
         <div className="flex items-center space-x-4">
           <img
@@ -34,10 +37,10 @@ const VaultInteractView = observer(function VaultInteractView({
           <Button>Deposit</Button>
         </div>
         <div>
-          <div className="dark:bg-gray-800 p-4 rounded-xl">
+          <div className="dark:bg-gray-800 bg-gray-200 p-4 rounded-xl">
             <div className="flex items-baseline">
               <h4 className="flex-grow text-lg">Amount</h4>
-              <p className="text-sm hover:border-b-2 border-dotted cursor-pointer">
+              <p className="text-sm border-b-2 border-dotted border-black dark:border-white cursor-pointer">
                 Balance: <span className="font-mono">123</span>
               </p>
             </div>
