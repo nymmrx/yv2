@@ -68,51 +68,53 @@ const VaultsTable = observer(function VaultsTable() {
   });
 
   return (
-    <table {...getTableProps()} className="w-full table-auto">
-      <thead>
-        {headerGroups.map((headerGroup) => {
-          const { key, ...props } = headerGroup.getHeaderGroupProps();
-          return (
-            <tr key={key} {...props} className="border border-gray-600">
-              {headerGroup.headers.map((column) => {
-                const { key, ...props } = column.getHeaderProps(
-                  column.getSortByToggleProps()
-                );
-                return (
-                  <th key={key} {...props}>
-                    {column.render("Header")}
-                  </th>
-                );
-              })}
-            </tr>
-          );
-        })}
-      </thead>
+    <div className="border border-gray-600 rounded-lg">
+      <table {...getTableProps()} className="w-full table-auto">
+        <thead>
+          {headerGroups.map((headerGroup) => {
+            const { key, ...props } = headerGroup.getHeaderGroupProps();
+            return (
+              <tr key={key} {...props} className="border-b border-gray-600">
+                {headerGroup.headers.map((column) => {
+                  const { key, ...props } = column.getHeaderProps(
+                    column.getSortByToggleProps()
+                  );
+                  return (
+                    <th key={key} {...props}>
+                      {column.render("Header")}
+                    </th>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </thead>
 
-      <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
-          prepareRow(row);
-          const { key, ...props } = row.getRowProps();
-          return (
-            <animated.tr
-              key={key}
-              style={animation}
-              {...props}
-              className="border border-gray-600"
-            >
-              {row.cells.map((cell) => {
-                const { key, ...props } = cell.getCellProps();
-                return (
-                  <td key={key} {...props}>
-                    {cell.render("Cell")}
-                  </td>
-                );
-              })}
-            </animated.tr>
-          );
-        })}
-      </tbody>
-    </table>
+        <tbody {...getTableBodyProps()}>
+          {rows.map((row) => {
+            prepareRow(row);
+            const { key, ...props } = row.getRowProps();
+            return (
+              <animated.tr
+                key={key}
+                style={animation}
+                {...props}
+                className="last:border-b-0 border-b border-gray-600"
+              >
+                {row.cells.map((cell) => {
+                  const { key, ...props } = cell.getCellProps();
+                  return (
+                    <td key={key} {...props}>
+                      {cell.render("Cell")}
+                    </td>
+                  );
+                })}
+              </animated.tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 });
 

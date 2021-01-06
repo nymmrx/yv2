@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { forwardRef, Ref, RefObject, useCallback } from "react";
 import clsx from "clsx";
 
 export function escapeRegExp(string: string): string {
@@ -13,11 +13,10 @@ export interface NumericInputProps
   value: string | number;
 }
 
-export default function NumericInput({
-  onChange,
-  className,
-  ...props
-}: NumericInputProps) {
+const NumericInput = forwardRef(function NumericInput(
+  { onChange, className, ...props }: NumericInputProps,
+  ref: Ref<HTMLInputElement>
+) {
   const enforcer = useCallback(
     (next: string) => {
       if (next === "" || inputRegex.test(escapeRegExp(next))) {
@@ -29,6 +28,7 @@ export default function NumericInput({
 
   return (
     <input
+      ref={ref}
       onChange={(event) => enforcer(event.target.value.replace(/,/g, "."))}
       inputMode="decimal"
       autoComplete="off"
@@ -46,4 +46,6 @@ export default function NumericInput({
       {...props}
     />
   );
-}
+});
+
+export default NumericInput;

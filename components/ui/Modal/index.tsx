@@ -1,26 +1,14 @@
 import React from "react";
-import {
-  DialogContent,
-  DialogOverlay,
-  DialogOverlayProps,
-} from "@reach/dialog";
+import { DialogOverlay, DialogOverlayProps } from "@reach/dialog";
 import { useTransition, animated } from "react-spring";
 
 import "@reach/dialog/styles.css";
 import ThemeProvider from "@comp/provider/ThemeProvider";
 
-export interface ModalProps extends DialogOverlayProps {
-  className?: string;
-}
+export type ModalProps = DialogOverlayProps;
 
-export default function Modal({
-  children,
-  isOpen,
-  className,
-  ...props
-}: ModalProps) {
+export default function Modal({ children, isOpen, ...props }: ModalProps) {
   const AnimatedDialogOverlay = animated(DialogOverlay) as typeof DialogOverlay;
-  const AnimatedDialogContent = animated(DialogContent) as typeof DialogContent;
   const transitions = useTransition(isOpen, null, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -37,15 +25,7 @@ export default function Modal({
               key={key}
               style={{ opacity: style.opacity }}
             >
-              <ThemeProvider>
-                <AnimatedDialogContent
-                  aria-label={"Modal"}
-                  style={{ transform: style.transform }}
-                  className={className}
-                >
-                  {children}
-                </AnimatedDialogContent>
-              </ThemeProvider>
+              <ThemeProvider>{children}</ThemeProvider>
             </AnimatedDialogOverlay>
           )
       )}

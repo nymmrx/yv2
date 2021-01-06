@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ["hover", "last"],
+    },
   },
   plugins: [],
   important: "#app",

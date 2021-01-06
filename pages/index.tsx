@@ -17,7 +17,6 @@ import YearnIcon from "@assets/yearn.svg";
 
 import useUI from "@hooks/stores/useUI";
 import ThemeSwitcher from "@comp/ui/ThemeSwitcher";
-import Confetti from "@comp/ui/Confetti";
 
 const Index = observer(function Index() {
   const { isOpen, children, close } = useUI((ui) => ui.modal);
@@ -61,11 +60,7 @@ const Index = observer(function Index() {
           <VaultsTable />
         </div>
       </Container>
-      <Modal
-        className="bg-transparent"
-        isOpen={isOpen}
-        onDismiss={action(() => close())}
-      >
+      <Modal isOpen={isOpen} onDismiss={action(() => close())}>
         <div>{children}</div>
       </Modal>
     </Page>
