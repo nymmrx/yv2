@@ -1,13 +1,17 @@
 import React, { ReactNode } from "react";
-import UIStore from "./ui";
 
 import VaultsStore from "./vaults";
+import LiveStore from "./live";
+import UIStore from "./ui";
 
 class RootStore {
   vaults: VaultsStore;
+  live: LiveStore;
   ui: UIStore;
+
   constructor() {
     this.vaults = new VaultsStore();
+    this.live = new LiveStore();
     this.ui = new UIStore();
   }
 }

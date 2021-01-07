@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeAutoObservable } from "mobx";
 import fetch from "node-fetch";
 
 import api from "@const/api";
@@ -34,14 +34,12 @@ export default class VaultsStore {
   vaults: Vault[] = [];
 
   constructor() {
-    makeObservable(this, {
-      vaults: observable,
-      fetch: action,
-    });
+    makeAutoObservable(this);
     this.fetch();
   }
 
   fetch = () => {
+    if (!process.browser) return;
     console.log("[vaults] fetching");
     fetch(api.vaults.all)
       .then((res) => res.json())
