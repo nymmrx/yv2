@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@ethersproject/address": "^5.0.8",
+    "@ethersproject/constants": "^5.0.7",
     "@ethersproject/contracts": "^5.0.8",
     "@ethersproject/networks": "^5.0.6",
     "@ethersproject/providers": "^5.0.17",
@@ -16,5 +17,8 @@
     "@uniswap/sdk": "^3.0.3",
     "dotenv": "^8.2.0",
     "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/signale": "^1.4.1"
   }
 }
