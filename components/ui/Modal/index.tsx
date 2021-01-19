@@ -11,7 +11,7 @@ export default function Modal({ children, isOpen, ...props }: ModalProps) {
   const AnimatedDialogOverlay = animated(DialogOverlay) as typeof DialogOverlay;
   const transitions = useTransition(isOpen, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1 },
+    enter: { opacity: 1.5 },
     leave: { opacity: 0 },
     config: { duration: 200 },
   });

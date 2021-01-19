@@ -6,12 +6,12 @@ import UIStore from "./ui";
 
 class RootStore {
   vaults: VaultsStore;
-  live: LiveStore;
+  // live: LiveStore;
   ui: UIStore;
 
   constructor() {
     this.vaults = new VaultsStore();
-    this.live = new LiveStore();
+    // this.live = new LiveStore();
     this.ui = new UIStore();
   }
 }

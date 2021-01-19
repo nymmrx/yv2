@@ -16,7 +16,8 @@ export interface Vault {
   decimals: string;
   inceptionBlock: string;
   icon: string | null;
-  token: {
+  tokenAddress: string;
+  tokenMetadata: {
     symbol: string;
     address: string;
     displayName: string;
@@ -44,9 +45,10 @@ export default class VaultsStore {
     fetch(api.vaults.all)
       .then((res) => res.json())
       .then((res) => {
+        console.log(res);
         return res;
       })
-      .then(action("Hello World", (vaults) => (this.vaults = vaults)));
+      .then(action((vaults) => (this.vaults = vaults)));
     // this.vaults = sample;
   };
 }

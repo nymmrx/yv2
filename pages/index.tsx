@@ -20,7 +20,6 @@ import ThemeSwitcher from "@comp/ui/ThemeSwitcher";
 
 const Index = observer(function Index() {
   const { isOpen, children, close } = useUI((ui) => ui.modal);
-
   return (
     <Page>
       <Container>

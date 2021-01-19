@@ -22,7 +22,7 @@ const VaultCellProps = observer(function VaultCellProps({
       <animated.img
         style={animation}
         className="w-8 h-8"
-        src={vault.token.icon ?? TokenFallbackImage}
+        src={vault.tokenMetadata.icon ?? TokenFallbackImage}
       />
       <p>{vault.displayName}</p>
       {vault.type != "v1" && <small>{vault.type} ✨</small>}

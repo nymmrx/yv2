@@ -28,7 +28,7 @@ const VaultInteractView = observer(function VaultInteractView({
         <div className="flex items-center space-x-4">
           <img
             className="w-12 h-12"
-            src={vault.token.icon ?? TokenFallbackImage}
+            src={vault.tokenMetadata.icon ?? TokenFallbackImage}
           />
           <div className="flex-grow">
             <h3 className="font-bold">Deposit: {vault.displayName}</h3>
@@ -51,7 +51,7 @@ const VaultInteractView = observer(function VaultInteractView({
                 onChange={setVal}
                 className="flex-grow text-2xl"
               />
-              <p className="font-mono">{vault.token.symbol}</p>
+              <p className="font-mono">{vault.tokenMetadata.symbol}</p>
             </div>
           </div>
         </div>
