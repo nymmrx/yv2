@@ -1,9 +1,13 @@
 module.exports = {
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
+
+    if (!isServer) {
+      config.node = { fs: "empty", module: "empty" };
+    }
 
     return config;
   },

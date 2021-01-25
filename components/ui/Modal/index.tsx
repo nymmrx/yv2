@@ -3,7 +3,7 @@ import { DialogOverlay, DialogOverlayProps } from "@reach/dialog";
 import { useTransition, animated } from "react-spring";
 
 import "@reach/dialog/styles.css";
-import ThemeProvider from "@comp/provider/ThemeProvider";
+import ThemeProvider from "@comp/provider/DarkModeProvider";
 
 export type ModalProps = DialogOverlayProps;
 

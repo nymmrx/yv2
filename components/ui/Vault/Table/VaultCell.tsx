@@ -24,7 +24,12 @@ const VaultCellProps = observer(function VaultCellProps({
         className="w-8 h-8"
         src={vault.tokenMetadata.icon ?? TokenFallbackImage}
       />
-      <p>{vault.displayName}</p>
+      <a
+        className="hover:underline"
+        href={`https://etherscan.io/address/${vault.address}`}
+      >
+        {vault.displayName}
+      </a>
       {vault.type != "v1" && <small>{vault.type} ✨</small>}
     </div>
   );

@@ -1,23 +1,20 @@
 import React, { ReactNode } from "react";
-import Link, { LinkProps } from "next/link";
+import NextLink, { LinkProps as NextLinkProps } from "next/link";
 import clsx from "clsx";
 
-export interface ButtonProps
-  extends LinkProps,
+export interface LinkProps
+  extends NextLinkProps,
     React.HTMLAttributes<HTMLAnchorElement> {
+  href: string;
   children?: ReactNode[] | ReactNode | string;
   active?: boolean;
 }
 
-export default function Button({
-  children,
-  active,
-  href,
-  ...props
-}: ButtonProps) {
+export default function Link({ children, active, href, ...props }: LinkProps) {
   return (
-    <Link href={href} {...props}>
+    <NextLink href={href}>
       <a
+        href={href}
         {...props}
         className={clsx(
           "text-lg transition hover:text-blue-400 dark:hover:text-white",
@@ -27,6 +24,6 @@ export default function Button({
       >
         {children}
       </a>
-    </Link>
+    </NextLink>
   );
 }

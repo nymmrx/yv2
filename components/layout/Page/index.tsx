@@ -1,18 +1,4 @@
-import React from "react";
-import clsx from "clsx";
+import tw from "twin.macro";
 
-export type PageProps = React.HTMLAttributes<HTMLDivElement>;
-
-export default function Page({ children, ...props }: PageProps) {
-  return (
-    <div
-      {...props}
-      className={clsx(
-        "dark:bg-gray-800 dark:text-white min-h-screen",
-        props.className
-      )}
-    >
-      {children}
-    </div>
-  );
-}
+const Page = tw.div`dark:bg-gray-800 dark:text-white min-h-screen`;
+export default Page;

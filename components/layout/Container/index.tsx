@@ -1,15 +1,4 @@
-import React from "react";
-import clsx from "clsx";
+import tw from "twin.macro";
 
-export type ContainerProps = React.HTMLAttributes<HTMLDivElement>;
-
-export default function Container({ children, ...props }: ContainerProps) {
-  return (
-    <div
-      {...props}
-      className={clsx("container m-auto py-4 px-4 sm:px-0", props.className)}
-    >
-      {children}
-    </div>
-  );
-}
+const Container = tw.div`container m-auto`;
+export default Container;

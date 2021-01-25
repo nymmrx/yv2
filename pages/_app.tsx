@@ -12,8 +12,9 @@ import "../styles/globals.scss";
 
 import { configure } from "mobx";
 
-import ThemeProvider from "@comp/provider/ThemeProvider";
-import Confetti from "@comp/ui/Confetti";
+import DarkModeProvider from "@comp/provider/DarkModeProvider";
+import GlobalStyles from "@comp/styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
 
 configure({
   enforceActions: "always",
@@ -22,6 +23,12 @@ configure({
   observableRequiresReaction: true,
   disableErrorBoundaries: true,
 });
+
+const theme = {
+  colors: {
+    primary: "#0070f3",
+  },
+};
 
 export default function YearnApp({ Component, pageProps }: AppProps) {
   return (
@@ -32,9 +39,12 @@ export default function YearnApp({ Component, pageProps }: AppProps) {
       </Head>
       <StrictMode>
         <StoreProvider>
-          <ThemeProvider>
+          <ThemeProvider theme={theme}>
             <Web3ReactProvider getLibrary={getLibrary}>
-              <Component {...pageProps} />
+              <GlobalStyles />
+              <DarkModeProvider>
+                <Component {...pageProps} />
+              </DarkModeProvider>
             </Web3ReactProvider>
           </ThemeProvider>
         </StoreProvider>

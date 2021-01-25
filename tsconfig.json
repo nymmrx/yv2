@@ -20,7 +20,8 @@
       "@comp/*": ["components/*"],
       "@assets/*": ["assets/*"],
       "@hooks/*": ["hooks/*"],
-      "@state/*": ["state/*"]
+      "@state/*": ["state/*"],
+      "@contracts/*": ["contracts/*"]
     }
   },
   "include": [

@@ -1,67 +1,87 @@
 import React from "react";
+import tw, { styled } from "twin.macro";
+
 import { observer } from "mobx-react-lite";
 import { action } from "mobx";
 
-import { BsGearFill } from "react-icons/bs";
+import {
+  RiFundsLine,
+  RiExchangeFundsLine,
+  RiStarLine,
+  RiCopperDiamondLine,
+} from "react-icons/ri";
 
 import Page from "@comp/layout/Page";
-import Container from "@comp/layout/Container";
-
-import Link from "@comp/ui/Link";
-import Button from "@comp/ui/Button";
 import WalletConnection from "@comp/ui/WalletConnection";
-import VaultsTable from "@comp/ui/Vault/Table";
-import Modal from "@comp/ui/Modal";
 
 import YearnIcon from "@assets/yearn.svg";
 
-import useUI from "@hooks/stores/useUI";
+import useVaults from "@hooks/stores/useVaults";
 import ThemeSwitcher from "@comp/ui/ThemeSwitcher";
 
+const MenuItem = styled.button(({ active }: { active?: boolean }) => [
+  tw`flex items-center space-x-2 px-4 py-3 rounded-lg transition-colors w-full`,
+  tw`text-xl text-left font-light`,
+  !active && tw`dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer`,
+  active && tw`dark:bg-gray-600 bg-gray-200`,
+]);
+
 const Index = observer(function Index() {
-  const { isOpen, children, close } = useUI((ui) => ui.modal);
+  const vaults = useVaults((store) => store.vaults);
   return (
     <Page>
-      <Container>
-        <div className="flex items-center">
-          <div className="flex-grow flex items-center  text-3xl">
-            <YearnIcon className="w-8 h-8 mr-4" />
-            <h1 className="hidden sm:block font-light">yearn.finance</h1>
-            <h1 className="block sm:hidden font-light">yearn</h1>
-          </div>
-          <div className="hidden lg:flex flex-grow items-baseline space-x-8">
-            <div className="w-24 text-center">
-              <Link href="/" active>
-                EARN
-              </Link>
+      <div tw="flex h-screen">
+        <div tw="flex-none w-80 min-h-full overflow-y-auto shadow-xl">
+          <div tw="flex flex-col min-h-full space-y-6 py-5 dark:bg-gray-700 bg-gray-100">
+            <div tw="flex space-x-4 items-center justify-center">
+              <YearnIcon tw="w-12 h-12" />
+              <h1 tw="text-3xl">yearn.finance</h1>
             </div>
-            <div className="w-24 text-center">
-              <Link href="/">BORROW</Link>
+            <hr tw="dark:bg-white bg-black" />
+            <div tw="flex justify-center">
+              <WalletConnection />
             </div>
-            <div className="w-24 text-center">
-              <Link href="/">INSURE</Link>
+            <hr tw="dark:bg-white bg-black" />
+            <div tw="flex-grow">
+              <ul tw="space-y-2 px-2">
+                <MenuItem active>
+                  <span tw="flex-grow">EARN</span>
+                  <RiFundsLine />
+                </MenuItem>
+                <MenuItem>
+                  <span tw="flex-grow">INSURE</span>
+                  <RiStarLine />
+                </MenuItem>
+                <MenuItem>
+                  <span tw="flex-grow">BORROW</span>
+                  <RiExchangeFundsLine />
+                </MenuItem>
+                <MenuItem>
+                  <span tw="flex-grow">CREDIT</span>
+                  <RiCopperDiamondLine />
+                </MenuItem>
+              </ul>
             </div>
-            <div className="w-24 text-center">
-              <Link href="/">CREDIT</Link>
+            <hr />
+            <div tw="flex flex-none px-4">
+              <ThemeSwitcher />
             </div>
-          </div>
-          <div className="flex space-x-2">
-            <WalletConnection />
-            <ThemeSwitcher />
-            <Button className="hidden md:block">
-              <BsGearFill className="w-5 h-5" />
-            </Button>
           </div>
         </div>
-      </Container>
-      <Container>
-        <div className="container lg:max-w-screen-lg mx-auto">
-          <VaultsTable />
+        <div tw="flex-none w-96 min-h-full overflow-y-auto">
+          <ul>
+            {vaults.map((vault) => (
+              <li tw="p-4 shadow-inner" key={vault.name}>
+                <div tw="flex items-center space-x-4">
+                  <img tw="w-10 h-10" src={vault.tokenMetadata.icon} />
+                  <h3 tw="text-lg font-mono">{vault.displayName}</h3>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-      </Container>
-      <Modal isOpen={isOpen} onDismiss={action(() => close())}>
-        <div>{children}</div>
-      </Modal>
+        <div tw="flex-grow min-h-full py-4 overflow-y-auto"></div>
+      </div>
     </Page>
   );
 });

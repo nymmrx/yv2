@@ -37,10 +37,7 @@ export default function Web3Connection() {
       setStatus(shortenAddress(account));
       library
         .lookupAddress(account)
-        .then((ens) => {
-          console.log(ens);
-          ens && setStatus(ens);
-        })
+        .then((ens) => ens && setStatus(ens))
         .catch(console.error);
     } else {
       setStatus("not connected");
