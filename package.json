@@ -9,6 +9,7 @@
     "export": "next export",
     "format": "prettier --write .",
     "lint": "eslint .",
+    "prebuild": "yarn typechain",
     "typechain": "typechain --target=ethers-v5 --outDir 'contracts' 'abi/*.json'"
   },
   "babelMacros": {
