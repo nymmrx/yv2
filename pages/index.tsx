@@ -22,8 +22,8 @@ import ThemeSwitcher from "@comp/ui/ThemeSwitcher";
 const MenuItem = styled.button(({ active }: { active?: boolean }) => [
   tw`flex items-center space-x-2 px-4 py-3 rounded-lg transition-colors w-full`,
   tw`text-xl text-left font-light`,
-  !active && tw`dark:hover:bg-gray-600 hover:bg-gray-200 cursor-pointer`,
-  active && tw`dark:bg-gray-600 bg-gray-200`,
+  !active && tw`dark:hover:bg-gray-700 hover:bg-gray-200 cursor-pointer`,
+  active && tw`dark:bg-gray-700 bg-gray-200`,
 ]);
 
 const Index = observer(function Index() {
@@ -32,7 +32,7 @@ const Index = observer(function Index() {
     <Page>
       <div tw="flex h-screen">
         <div tw="flex-none w-80 min-h-full overflow-y-auto shadow-xl">
-          <div tw="flex flex-col min-h-full space-y-6 py-5 dark:bg-gray-700 bg-gray-100">
+          <div tw="flex flex-col min-h-full space-y-6 py-5 dark:bg-gray-800 bg-gray-100">
             <div tw="flex space-x-4 items-center justify-center">
               <YearnIcon tw="w-12 h-12" />
               <h1 tw="text-3xl">yearn.finance</h1>
@@ -68,13 +68,24 @@ const Index = observer(function Index() {
             </div>
           </div>
         </div>
-        <div tw="flex-none w-96 min-h-full overflow-y-auto">
+        <div tw="flex-none w-96 min-h-full overflow-y-scroll dark:bg-gray-900">
+          <p>Search here</p>
           <ul>
             {vaults.map((vault) => (
-              <li tw="p-4 shadow-inner" key={vault.name}>
-                <div tw="flex items-center space-x-4">
-                  <img tw="w-10 h-10" src={vault.tokenMetadata.icon} />
-                  <h3 tw="text-lg font-mono">{vault.displayName}</h3>
+              <li tw="shadow-inner" key={vault.name}>
+                <div tw="py-4 border-b dark:border-gray-600 border-gray-200">
+                  <div tw="px-4 space-y-2">
+                    <div tw="flex items-center space-x-4">
+                      <img tw="w-10 h-10" src={vault.tokenMetadata.icon} />
+                      <h3 tw="flex-grow text-lg font-mono">
+                        {vault.displayName}
+                      </h3>
+                      <h5>{(vault.apy.inceptionSample * 100).toFixed(3)}%</h5>
+                    </div>
+                    <div>
+                      <span>Stats and stuff</span>
+                    </div>
+                  </div>
                 </div>
               </li>
             ))}
